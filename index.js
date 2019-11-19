@@ -52,7 +52,4 @@ function computePostal(response, weight, mailType) {
       break;
   }
 
-  const params = {result:result};
-
-  response.render('pages/result', params);
 }
