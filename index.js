@@ -19,7 +19,7 @@ function postal(request, response) {
 
 function computePostal(response, weight, mailType) {
 
-  let result = 0;
+  let result;
 
   if(mailType == 'stamped'){
     console.log("if statement started");
@@ -58,7 +58,7 @@ function computePostal(response, weight, mailType) {
   //     break;
   // }
 
-  const params = {
+  let params = {
     result: result
   };
 
