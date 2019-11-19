@@ -25,20 +25,17 @@ function computePostal(response, weight, mailType) {
 
     case 'stamped':
       if (weight <= 1) {
-        result = 0.55;
+        return result = 0.55;
       } else if (weight <= 2 && weight > 1) {
-        result = 0.70;
+        return result = 0.70;
       } else if (weight <= 3 && weight > 2) {
-        result = 0.85;
+        return result = 0.85;
       } else if (weigh <= 3.5 && weight > 3) {
-        result = 1.00;
+        return result = 1.00;
       } else {
         result = "There was an error";
       }
-      const params = {result:result};
 
-      response.render('pages/result', params);
-      
       break;
 
     case 'metered':
@@ -51,5 +48,10 @@ function computePostal(response, weight, mailType) {
       console.log(`There was an error with calculating`);
       break;
   }
+  const params = {
+    result: result
+  };
+
+  response.render('pages/result', params);
 
 }
