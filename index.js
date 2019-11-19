@@ -8,7 +8,7 @@ express()
   .set('view engine', 'ejs')
   .get('/', (req, res) => res.render('pages/index'))
   .get('/postal', postal)
-  .listen(PORT, () => alert(`Listening on ${ PORT }`))
+  .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
 function postal(request, response) {
   const weight = Number(request.query.weight);
