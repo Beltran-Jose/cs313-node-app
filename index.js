@@ -21,25 +21,23 @@ function computePostal(response, weight, mailType) {
 
   let result = ";lakjdf;lakdjf;l";
 
-  alert("compute function started");
+
 
   switch (mailType) {
     case 'stamped':
 
-      alert("switch statement started");
-      
       if (weight <= 1) {
         result = 0.55;
-        alert("1");
+
       } else if (weight <= 2 && weight > 1) {
         result = 0.70;
-        alert("2");
+
       } else if (weight <= 3 && weight > 2) {
         result = 0.85;
-        alert("3");
+
       } else if (weigh <= 3.5 && weight > 3) {
         result = 1.00;
-        alert("4");
+
       } else {
         result = "There was an error";
       }
@@ -53,7 +51,7 @@ function computePostal(response, weight, mailType) {
     case 'first-class':
       break;
     default:
-      alert(`There was an error with calculating`);
+      console.log('test');
       break;
   }
 
