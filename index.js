@@ -19,9 +19,10 @@ function postal(request, response) {
 
 function computePostal(response, weight, mailType) {
 
-  let result = ";lakjdf;lakdjf;l";
+  let result = 0;
 
   if(mailType == 'stamped'){
+    console.log("if statement started");
     if (weight <= 1) {
       result = 0.55;
 
