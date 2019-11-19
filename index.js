@@ -12,8 +12,8 @@ express()
 
 function postal(request, response) {
 
-  let weight = Number(request.query.weight);
-  let mailType = request.query.mailType;
+  const weight = Number(request.query.weight);
+  const mailType = request.query.mailType;
 
   computePostal(response, weight, mailType);
 
