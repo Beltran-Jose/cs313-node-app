@@ -11,18 +11,21 @@ express()
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
 function postal(request, response) {
-  const weight = Number(request.query.weight);
-  const mailType = request.query.mailType;
+
+  let weight = Number(request.query.weight);
+  let mailType = request.query.mailType;
 
   computePostal(response, weight, mailType);
+
 }
 
 function computePostal(response, weight, mailType) {
 
   let result;
-
+  alert(result);
   if(mailType == 'stamped'){
-    console.log("if statement started");
+
+    alert("if statement started");
     if (weight <= 1) {
       result = 0.55;
 
@@ -38,25 +41,8 @@ function computePostal(response, weight, mailType) {
     } else {
       result = "There was an error";
     }
+
   }
-
-  // switch (mailType) {
-  //   case 'stamped':
-
-
-
-  //     break;
-
-  //   case 'metered':
-  //     break;
-  //   case 'flats':
-  //     break;
-  //   case 'first-class':
-  //     break;
-  //   default:
-  //     console.log('test');
-  //     break;
-  // }
 
   let params = {
     result: result
