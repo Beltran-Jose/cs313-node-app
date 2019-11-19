@@ -8,7 +8,7 @@ express()
   .set('view engine', 'ejs')
   .get('/', (req, res) => res.render('pages/index'))
   .get('/postal', postal)
-  .listen(PORT, () => console.log(`Listening on ${ PORT }`))
+  .listen(PORT, () => alert(`Listening on ${ PORT }`))
 
 function postal(request, response) {
   const weight = Number(request.query.weight);
@@ -20,22 +20,22 @@ function postal(request, response) {
 function computePostal(response, weight, mailType) {
 
   let result = ";lakjdf;lakdjf;l";
-  console.log("compute function started")
+  alert("compute function started")
   switch (mailType) {
     case 'stamped':
-      console.log("switch statement started")
+      alert("switch statement started")
       if (weight <= 1) {
         result = 0.55;
-        console.log("1");
+        alert("1");
       } else if (weight <= 2 && weight > 1) {
         result = 0.70;
-        console.log("2");
+        alert("2");
       } else if (weight <= 3 && weight > 2) {
         result = 0.85;
-        console.log("3");
+        alert("3");
       } else if (weigh <= 3.5 && weight > 3) {
         result = 1.00;
-        console.log("4");
+        alert("4");
       } else {
         result = "There was an error";
       }
@@ -48,7 +48,7 @@ function computePostal(response, weight, mailType) {
     case 'first-class':
       break;
     default:
-      console.log(`There was an error with calculating`);
+      alert(`There was an error with calculating`);
       break;
   }
   const params = {
