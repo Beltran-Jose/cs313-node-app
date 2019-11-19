@@ -35,6 +35,10 @@ function computePostal(response, weight, mailType) {
       } else {
         result = "There was an error";
       }
+      const params = {result:result};
+
+      response.render('pages/result', params);
+      
       break;
 
     case 'metered':
