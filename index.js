@@ -19,7 +19,7 @@ function postal(request, response) {
 
 function computePostal(response, weight, mailType) {
 
-  let result = 0;
+  let result = ";lakjdf;lakdjf;l";
   console.log("compute function started")
   switch (mailType) {
     case 'stamped':
