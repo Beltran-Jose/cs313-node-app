@@ -20,10 +20,14 @@ function postal(request, response) {
 function computePostal(response, weight, mailType) {
 
   let result = ";lakjdf;lakdjf;l";
-  alert("compute function started")
+
+  alert("compute function started");
+
   switch (mailType) {
     case 'stamped':
-      alert("switch statement started")
+
+      alert("switch statement started");
+      
       if (weight <= 1) {
         result = 0.55;
         alert("1");
@@ -39,6 +43,7 @@ function computePostal(response, weight, mailType) {
       } else {
         result = "There was an error";
       }
+
       break;
 
     case 'metered':
@@ -51,7 +56,7 @@ function computePostal(response, weight, mailType) {
       alert(`There was an error with calculating`);
       break;
   }
-  
+
   const params = {
     result: result
   };
