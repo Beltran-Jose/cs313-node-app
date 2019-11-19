@@ -21,39 +21,41 @@ function computePostal(response, weight, mailType) {
 
   let result = ";lakjdf;lakdjf;l";
 
+  if(mailType == 'stamped'){
+    if (weight <= 1) {
+      result = 0.55;
 
+    } else if (weight <= 2 && weight > 1) {
+      result = 0.70;
 
-  switch (mailType) {
-    case 'stamped':
+    } else if (weight <= 3 && weight > 2) {
+      result = 0.85;
 
-      if (weight <= 1) {
-        result = 0.55;
+    } else if (weigh <= 3.5 && weight > 3) {
+      result = 1.00;
 
-      } else if (weight <= 2 && weight > 1) {
-        result = 0.70;
-
-      } else if (weight <= 3 && weight > 2) {
-        result = 0.85;
-
-      } else if (weigh <= 3.5 && weight > 3) {
-        result = 1.00;
-
-      } else {
-        result = "There was an error";
-      }
-
-      break;
-
-    case 'metered':
-      break;
-    case 'flats':
-      break;
-    case 'first-class':
-      break;
-    default:
-      console.log('test');
-      break;
+    } else {
+      result = "There was an error";
+    }
   }
+
+  // switch (mailType) {
+  //   case 'stamped':
+
+
+
+  //     break;
+
+  //   case 'metered':
+  //     break;
+  //   case 'flats':
+  //     break;
+  //   case 'first-class':
+  //     break;
+  //   default:
+  //     console.log('test');
+  //     break;
+  // }
 
   const params = {
     result: result
