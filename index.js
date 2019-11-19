@@ -20,22 +20,25 @@ function postal(request, response) {
 function computePostal(response, weight, mailType) {
 
   let result = 0;
-
+  console.log("compute function started")
   switch (mailType) {
-
     case 'stamped':
+      console.log("switch statement started")
       if (weight <= 1) {
-        return result = 0.55;
+        result = 0.55;
+        console.log("1");
       } else if (weight <= 2 && weight > 1) {
-        return result = 0.70;
+        result = 0.70;
+        console.log("2");
       } else if (weight <= 3 && weight > 2) {
-        return result = 0.85;
+        result = 0.85;
+        console.log("3");
       } else if (weigh <= 3.5 && weight > 3) {
-        return result = 1.00;
+        result = 1.00;
+        console.log("4");
       } else {
         result = "There was an error";
       }
-
       break;
 
     case 'metered':
