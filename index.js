@@ -51,6 +51,7 @@ function computePostal(response, weight, mailType) {
       alert(`There was an error with calculating`);
       break;
   }
+  
   const params = {
     result: result
   };
